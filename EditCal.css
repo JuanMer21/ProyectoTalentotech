@@ -1,0 +1,101 @@
+/* Estilo general del cuerpo de la página */
+body {
+    background-color: #f0f4f8; /* Fondo gris muy claro para el cuerpo */
+    margin: 0; /* Elimina el margen predeterminado alrededor del cuerpo */
+}
+
+/* Estilo del encabezado principal (h1) */
+h1 {
+    text-align: center; /* Centra el texto del encabezado dentro del contenedor */
+    margin: auto; /* Centra el encabezado horizontalmente en el contenedor */
+    background-color: #003366; /* Fondo azul oscuro para el encabezado */
+    color: #ffffff; /* Texto blanco en el encabezado */
+    width: 100%; /* El encabezado ocupa todo el ancho del contenedor */
+}
+
+/* Estilo de los cuadros */
+.cuadro {
+    width: 55%; /* Ancho del cuadro como el 55% del contenedor padre */
+    margin: auto; /* Centra el cuadro horizontalmente en el contenedor */
+    padding: 5px; /* Espacio interno de 3 píxeles alrededor del contenido del cuadro */
+    background-color: #ffffff; /* Fondo blanco para el cuadro */
+    border-radius: 8px; /* Bordes redondeados con un radio de 8 píxeles */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del cuadro */
+    position: relative; /* Posicionamiento relativo para ajustes */
+    top: 4px; /* Mueve el cuadro 4 píxeles hacia abajo desde su posición original */
+}
+    
+
+/* Estilo de las tablas */
+table {
+    width: 100%; /* Ancho de la tabla al 100% del contenedor padre */
+    border-collapse: collapse; /* Elimina los espacios entre los bordes de las celdas */
+}
+
+/* Estilo de las celdas de la tabla (th y td) */
+th, td {
+    padding: 10px; /* Espacio interno de 10 píxeles en las celdas */
+    text-align: center; /* Centra el texto en las celdas */
+    border-bottom: 1px solid #d0d0d0; /* Borde inferior gris claro */
+}
+
+/* Estilo de las celdas de encabezado (th) */
+th {
+    background-color: #003366; /* Fondo azul oscuro para los encabezados de columna */
+    color: #ffffff; /* Texto blanco en los encabezados */
+}
+
+/* Estilo para las celdas de encabezado en columnas pares (opcional) */
+th :nth-child(even) {
+    background-color: #004080; /* Fondo azul ligeramente más oscuro para columnas pares en los encabezados */
+}
+
+/* Estilo para filas de la tabla al pasar el ratón (hover) */
+tr:hover {
+    background-color: #b2dfdb; /* Fondo azul claro al pasar el ratón sobre las filas */
+}
+
+/* Estilo de los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    padding: 10px 20px; /* Espacio interno de 10 píxeles verticalmente y 20 píxeles horizontalmente */
+    border: 2px solid #003366; /* Borde sólido de 2 píxeles en azul oscuro */
+    background-color: #003366; /* Fondo azul oscuro para el enlace */
+    color: #ffffff; /* Texto blanco en el enlace */
+    border-radius: 5px; /* Bordes redondeados con un radio de 5 píxeles */
+    display: inline-block; /* Permite que el padding y el tamaño se comporten correctamente */
+    text-align: center; /* Centra el texto dentro del enlace */
+}
+
+/* Estilo de los enlaces al pasar el ratón (hover) */
+a:hover {
+    background-color: #004080; /* Azul ligeramente más claro al pasar el ratón sobre el enlace */
+    border-color: #004080; /* Cambia el color del borde al pasar el ratón */
+}
+
+/* Estilo para los botones de editar y guardar */
+button.edit-btn {
+    background-color: #003366; /* Azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 8px 16px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de la fuente */
+    cursor: pointer; /* Apuntar con el ratón */
+    margin-right: 5px; /* Espaciado entre botones */
+}
+
+button.save-btn {
+    background-color: #004080; /* Azul ligeramente más oscuro */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 8px 16px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de la fuente */
+    cursor: pointer; /* Apuntar con el ratón */
+    margin-right: 5px; /* Espaciado entre botones */
+}
+
+button.edit-btn:hover, button.save-btn:hover {
+    opacity: 0.8; /* Efecto de desvanecimiento al pasar el ratón */
+}

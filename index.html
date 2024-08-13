@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <style>
+        /* Aplicar una fuente sans-serif y centrar el contenido vertical y horizontalmente */
+        body {
+            font-family: Arial, sans-serif;
+            /* Fuente de la página */
+            display: flex;
+            /* Utilizar flexbox para centrar el contenido */
+            justify-content: center;
+            /* Centrar horizontalmente */
+            align-items: center;
+            /* Centrar verticalmente */
+            height: 100vh;
+            /* Altura de la ventana del navegador */
+            background-image: url('https://revistadigital.mx/wp-content/uploads/2022/02/Depositphotos_267998906_L.gif');
+            /* Ruta de la imagen de fondo */
+            background-size: cover;
+            /* Ajustar la imagen para cubrir toda la pantalla */
+            background-position: center;
+            /* Centrar la imagen de fondo */
+            background-repeat: no-repeat;
+            /* No repetir la imagen de fondo */
+            margin: 0;
+            /* Quitar márgenes */
+        }
+
+        /* Estilos para el contenedor del formulario de login */
+        .login-container {
+            background-color: white;
+            /* Fondo blanco para el contenedor */
+            padding: 20px;
+            /* Espacio interno alrededor del contenido */
+            border-radius: 8px;
+            /* Esquinas redondeadas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra alrededor del contenedor */
+            max-width: 400px;
+            /* Ancho máximo del contenedor */
+            width: 100%;
+            /* Ancho del contenedor */
+        }
+
+        /* Estilo para el encabezado dentro del contenedor */
+        .login-container h2 {
+            margin-bottom: 20px;
+            /* Espacio inferior */
+            color: #333;
+            /* Color del texto */
+        }
+
+        /* Estilo para las etiquetas (labels) de los campos del formulario */
+        .login-container label {
+            display: block;
+            /* Mostrar como bloque para ocupar toda la línea */
+            margin-bottom: 5px;
+            /* Espacio inferior */
+            color: #555;
+            /* Color del texto */
+        }
+
+        /* Estilo para los campos de texto y contraseña */
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            /* Ancho completo del contenedor padre */
+            padding: 10px;
+            /* Espacio interno */
+            margin-bottom: 20px;
+            /* Espacio inferior */
+            border: 1px solid #ccc;
+            /* Borde gris claro */
+            border-radius: 4px;
+            /* Esquinas redondeadas */
+        }
+
+        /* Estilo para el contenedor de los botones */
+        .login-container .button-group {
+            display: flex;
+            /* Utilizar flexbox para los botones */
+            justify-content: space-between;
+            /* Espaciado entre los botones */
+        }
+
+        /* Estilo base para los botones */
+        .login-container button {
+            padding: 10px 20px;
+            /* Espacio interno */
+            border: none;
+            /* Sin borde */
+            border-radius: 4px;
+            /* Esquinas redondeadas */
+            cursor: pointer;
+            /* Cambiar cursor a puntero al pasar sobre el botón */
+        }
+
+        /* Estilo para el botón de inicio de sesión */
+        .login-container .login-btn {
+            background-color: #28a745;
+            /* Fondo verde */
+            color: white;
+            /* Texto blanco */
+        }
+
+        /* Estilo para el botón de limpiar */
+        .login-container .clear-btn {
+            background-color: #dc3545;
+            /* Fondo rojo */
+            color: white;
+            /* Texto blanco */
+        }
+
+        /* Efecto hover para el botón de inicio de sesión */
+        .login-container .login-btn:hover {
+            background-color: #218838;
+            /* Fondo verde oscuro */
+        }
+
+        /* Efecto hover para el botón de limpiar */
+        .login-container .clear-btn:hover {
+            background-color: #c82333;
+            /* Fondo rojo oscuro */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <label for="username">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="clave" name="clave" required>
+
+            <div class="button-group">
+                <button type="button" class="login-btn" onclick="direccionParaPrincipal()">Iniciar Sesión</button>
+                <button type="reset" class="clear-btn">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function direccionParaPrincipal() {
+            
+            var username = document.getElementById('usuario').value;
+            var password = document.getElementById('clave').value;
+            var alertDiv = document.getElementById('alert');
+
+
+
+
+            if (username && password) {
+
+                if (username === 'admin' && password === '1234') {
+                    window.location.href = 'Principal.html';
+                } else {
+                    alert = "<div class='alert alert-danger text-center'>Usuario o Clave Incorrectos</div>";
+                }
+            } else {
+                alert = "<div class='alert alert-danger text-center'>Por Favor Ingrese Usuario y Contraseña</div>";
+            }
+        }
+    </script>
+</body>
+
+</html>
